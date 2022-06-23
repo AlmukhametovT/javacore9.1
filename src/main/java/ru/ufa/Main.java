@@ -39,7 +39,7 @@ public class Main {
         //cats.forEach(System.out::println);
 
         Stream<Cats> stream = cats.stream();
-        stream.filter(value -> value.getUpvotes() > 0)
+        stream.filter(value -> value.getUpvotes() != null && Integer.parseInt(value.getUpvotes()) > 0)
                 .forEach(System.out::println);
     }
 }
